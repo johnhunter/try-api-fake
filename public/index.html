@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hello page</title>
+  <script async>
+    fetch('//localhost:3000/api/people?_limit=3')
+      .then(res => res.json())
+      .then(people => {
+        const list = people.map(({ id, name }) => `
+          <li id="${id}"><b>${name}</b></li>`);
+
+        document.querySelector('#root').innerHTML = `<ol>${list.join('')}</ol>`;
+      });
+  </script>
+</head>
+<body>
+  <h1>Hello</h1>
+
+  <p>Top 3 people</p>
+
+  <div id="root"></div>
+</body>
+</html>
