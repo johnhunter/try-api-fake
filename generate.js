@@ -1,13 +1,12 @@
-const faker = require('faker');
-const _ = require('lodash');
+const { faker } = require('@faker-js/faker');
+const { times } = require('lodash');
 
 module.exports = () => {
-
   return {
-    people: _.times(20, id => ({
+    people: times(20, (id) => ({
       id,
-      name: faker.name.findName(),
-      avatar: faker.internet.avatar()
-    }))
+      name: faker.person.fullName(),
+      avatar: faker.internet.avatar(),
+    })),
   };
 };

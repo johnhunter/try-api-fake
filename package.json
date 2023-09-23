@@ -4,11 +4,10 @@
   "description": "A quick template for generating api fakes using json-server and faker.",
   "author": "john@johnhunter.info",
   "dependencies": {
-    "faker": "^5.4.0",
-    "json-server": "^0.16.3",
+    "@faker-js/faker": "^8.1.0",
+    "json-server": "^0.17.3",
     "lodash": "^4.17.21"
   },
-  "devDependencies": {},
   "scripts": {
     "start": "json-server --watch generate.js"
   },
