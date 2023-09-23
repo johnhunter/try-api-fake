@@ -1,5 +1,6 @@
 {
   "routes": "routes.json",
   "snapshots": "snapshots",
-  "delay": 150
+  "delay": 150,
+  "port": 3000
 }
